@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio de evidencias de la asignatura Arquitectura de Redes. Tareas, prácticas, participaciones, glosario y proyecto del primer parcial.">
+<meta name="author" content="Abimael Reyes González">
+<meta name="color-scheme" content="light dark">
+<title>Arquitectura de Redes | Portafolio de evidencias</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<a class="saltar" href="#registro">Saltar al registro de evidencias</a>
+
+<!-- ============ Barra superior ============ -->
+<header class="barra">
+    <div class="barra-fila">
+        <button class="marca" id="btnInicio" type="button">
+            <span class="marca-sigla" aria-hidden="true">AR</span>
+            <span class="marca-texto">
+                <b>Arquitectura de Redes</b>
+                <span>Portafolio de evidencias</span>
+            </span>
+        </button>
+
+        <nav class="menu" id="menu" aria-label="Secciones del portafolio">
+            <a href="#inicio">Inicio</a>
+            <a href="#registro">Registro</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#ficha">Alumno</a>
+        </nav>
+
+        <button class="icono-btn" id="btnTema" type="button" aria-pressed="false">
+            <span class="solo-lectores">Activar tema oscuro</span>
+            <svg class="icono-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.2"/>
+                <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/>
+            </svg>
+            <svg class="icono-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.2 14.4A8.6 8.6 0 0 1 9.6 3.8a8.6 8.6 0 1 0 10.6 10.6z"/>
+            </svg>
+        </button>
+
+        <button class="icono-btn btn-menu" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="solo-lectores">Abrir el menú de navegación</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<!-- ============ Portada ============ -->
+<section class="portada" id="inicio">
+    <canvas class="malla" id="mallaRed" aria-hidden="true"></canvas>
+
+    <div class="contenedor portada-contenido">
+        <div class="titular">
+            <p class="titular-supra">
+                <span class="sello">UAEMex</span>
+                Ingeniería en Computación
+            </p>
+
+            <h1 class="titular-nombre">Arquitectura<br>de Redes</h1>
+
+            <p class="titular-sub">Portafolio de evidencias - 2026</p>
+        </div>
+
+        <p class="portada-texto">
+            Evidencias de trabajo realizado durante el curso de Arquitectura de Redes
+        </p>
+
+        <dl class="ficha-datos">
+            <div>
+                <dt>Evidencias</dt>
+                <dd id="totalEvidencias">18</dd>
+            </div>
+            <div>
+                <dt>Parciales</dt>
+                <dd>1 de 2</dd>
+            </div>
+            <div>
+                <dt>Última entrega</dt>
+                <dd id="ultimaEntrega">17 sep</dd>
+            </div>
+            <div>
+                <dt>Secciones</dt>
+                <dd>5</dd>
+            </div>
+        </dl>
+    </div>
+</section>
+
+<!-- ============ Navegación por parciales ============ -->
+<nav class="barra-parciales" id="barraParciales" aria-label="Navegación por parcial">
+    <div class="contenedor parciales-fila">
+        <div class="parciales-grupo" id="grupoParciales" role="group" aria-label="Elegir parcial">
+            <button class="pestana" type="button" data-parcial="todos" aria-pressed="true">
+                Todo el curso <b>18</b>
+            </button>
+            <button class="pestana" type="button" data-parcial="primer" aria-pressed="false">
+                Primer parcial <b>18</b>
+            </button>
+            <button class="pestana" type="button" data-parcial="segundo" aria-pressed="false">
+                Segundo parcial <b>0</b>
+            </button>
+        </div>
+        <p class="parciales-nota" id="notaParcial">Agosto a septiembre de 2026</p>
+    </div>
+</nav>
+
+<!-- ============ Registro ============ -->
+<section class="seccion" id="registro">
+    <div class="contenedor">
+        <div class="seccion-cabeza">
+            <h2>Registro de evidencias</h2>
+            <p>Ordenado de la entrega más reciente a la más antigua.</p>
+        </div>
+
+        <div class="filtros">
+            <div class="buscador">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>
+                </svg>
+                <label class="solo-lectores" for="busqueda">Buscar una evidencia por nombre, sección o fecha</label>
+                <input id="busqueda" type="search" placeholder="Buscar por nombre, sección o fecha" autocomplete="off" spellcheck="false">
+                <kbd class="atajo">/</kbd>
+            </div>
+
+            <div class="grupo-filtros" id="filtrosCategoria" role="group" aria-label="Filtrar por sección">
+                <span>Sección</span>
+            </div>
+        </div>
+
+        <div class="barra-estado">
+            <p id="conteo" role="status" aria-live="polite"></p>
+            <button class="enlace-boton" id="btnLimpiar" type="button" hidden>Quitar filtros</button>
+        </div>
+
+        <div class="registro" id="listaEvidencias"></div>
+    </div>
+</section>
+
+<!-- ============ Secciones ============ -->
+<section class="seccion" id="actividades">
+    <div class="contenedor">
+        <div class="seccion-cabeza">
+            <h2>Actividades del curso</h2>
+            <p>Volumen y avance del curso completo, sumando los dos parciales.</p>
+        </div>
+
+        <div class="tablero">
+            <div class="tablero-resumen" id="tableroResumen"></div>
+            <div class="tablero-barra" id="tableroBarra"></div>
+            <div class="tablero-metricas" id="tableroMetricas"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ Ficha ============ -->
+<section class="seccion" id="ficha">
+    <div class="contenedor">
+        <div class="seccion-cabeza">
+            <h2>Ficha del alumno</h2>
+            <p>Datos del alumno.</p>
+        </div>
+
+        <div class="ficha">
+            <div>
+              <div class="ficha-identidad">
+                <figure class="retrato">
+                    <!-- Sustituye el archivo por la fotografía del alumno.
+                         Formato sugerido: cuadrada, 600 x 600 px o mayor. -->
+                    <img id="fotoAlumno"
+                         src="archivos/foto-alumno.jpg"
+                         alt="Fotografía de Abimael Reyes González"
+                         width="200" height="200" loading="lazy">
+                    <span class="retrato-vacio" id="retratoVacio">
+                        <b>AR</b>
+                        <small><br></small>
+                    </span>
+                </figure>
+
+                <div class="ficha-nombre">
+                    <h3>Abimael Reyes González</h3>
+                    <p>Ingeniería en Computación (ICO)</p>
+                    <p>Universidad Autónoma del Estado de México</p>
+                    <p>No. Cuenta: 2327685</p>
+                    <p id="fichaTotal"></p>
+                </div>
+              </div>
+
+                <dl class="ficha-lista">
+                    <div><dt>Periodo</dt><dd>2026 B</dd></div>
+                    <div><dt>Semestre</dt><dd>Septimmo</dd></div>
+                    <div><dt>Correo</dt><dd>areyesg045@alumno.uaemex.mx</dd></div>
+                    <div><dt>Asignatura</dt><dd>Arquitectura de Redes</dd></div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ Ventana del video ============ -->
+<dialog class="ventana" id="ventanaVideo" aria-labelledby="tituloVideo">
+    <div class="ventana-cabeza">
+        <div>
+            <h2 id="tituloVideo">Video del proyecto</h2>
+            <p>Artículo en idioma inglés, primer parcial</p>
+        </div>
+        <button class="icono-btn" id="btnCerrarVideo" type="button" style="margin-left:auto">
+            <span class="solo-lectores">Cerrar la ventana del video</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18"/>
+            </svg>
+        </button>
+    </div>
+    <div class="ventana-cuerpo">
+        <div class="reproductor">
+            <video id="reproductorVideo" controls preload="metadata" playsinline>
+                <source src="archivos/primer-parcial/proyecto/video.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video. Descarga el archivo para verlo.
+            </video>
+            <div class="cargando" id="cargandoVideo">
+                <span class="rueda" aria-hidden="true"></span>
+                <span>Cargando el video…</span>
+            </div>
+        </div>
+        <p class="ventana-pie">
+            <span>video.mp4 — 92.7 MB, 15 min</span>
+            <a href="archivos/primer-parcial/proyecto/video.mp4" download>Descargar el archivo</a>
+        </p>
+    </div>
+</dialog>
+
+<!-- ============ Pie ============ -->
+<footer class="pie">
+    <div class="contenedor pie-fila">
+        <p><b>Arquitectura de Redes</b> — Portafolio de evidencias</p>
+        <p>Abimael Reyes González - Ingeniería en Computación -  UAEMex</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
