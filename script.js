@@ -36,7 +36,7 @@ const categorias = [
     { id:"practica",      titulo:"Prácticas",      singular:"Práctica",      resumen:"Practicas en equipo sobre Aquitectura de Redes." },
     { id:"participacion", titulo:"Participaciones",singular:"Participación", resumen:"Evidencias de las sesiones de clase." },
     { id:"glosario",      titulo:"Glosario",       singular:"Glosario",      resumen:"Glosarios de los parciales." },
-    { id:"video",      titulo:"Video",       singular:"Video",      resumen:"Propuesta y video del artículo en inglés." }
+    { id:"proyecto",      titulo:"Proyecto",       singular:"Proyecto",      resumen:"Propuesta y video del artículo en inglés." }
 ];
 
 const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
