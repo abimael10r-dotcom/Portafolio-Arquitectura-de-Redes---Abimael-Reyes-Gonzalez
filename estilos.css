@@ -1208,3 +1208,6 @@ dialog.ventana[open] { animation: aparecer 180ms var(--ease); }
     body { background: #fff; }
     .evidencia { break-inside: avoid; }
 }
+
+/* Secciones sin evidencias en el parcial elegido */
+.chip[hidden] { display: none; }
