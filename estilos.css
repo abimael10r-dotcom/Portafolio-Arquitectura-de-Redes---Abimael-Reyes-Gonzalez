@@ -34,6 +34,8 @@
     --c-participacion: #464e8f;  --c-participacion-bg: #eceef9;
     --c-glosario:      #7a4e1e;  --c-glosario-bg:      #f7efe5;
     --c-proyecto:      #8e1729;  --c-proyecto-bg:      #f8eaec;
+    --c-acuse:         #3d6b2c;  --c-acuse-bg:         #ebf4e6;
+    --c-aplicativo:    #7b3f8d;  --c-aplicativo-bg:    #f4ebf7;
 
     /* Tipografía */
     --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
@@ -84,6 +86,8 @@
     --c-participacion: #a4abe8;  --c-participacion-bg: #1e2140;
     --c-glosario:      #dcae76;  --c-glosario-bg:      #322516;
     --c-proyecto:      #ef8a99;  --c-proyecto-bg:      #33191f;
+    --c-acuse:         #a3d68c;  --c-acuse-bg:         #1a2b14;
+    --c-aplicativo:    #d5a6e6;  --c-aplicativo-bg:    #2b1a33;
 
     --shadow-dialog: 0 18px 48px rgba(0, 0, 0, .6);
     color-scheme: dark;
@@ -747,6 +751,8 @@ button { cursor: pointer; }
 .et-participacion { --et-fg: var(--c-participacion); --et-bg: var(--c-participacion-bg); }
 .et-glosario      { --et-fg: var(--c-glosario);      --et-bg: var(--c-glosario-bg); }
 .et-proyecto      { --et-fg: var(--c-proyecto);      --et-bg: var(--c-proyecto-bg); }
+.et-acuse         { --et-fg: var(--c-acuse);         --et-bg: var(--c-acuse-bg); }
+.et-aplicativo    { --et-fg: var(--c-aplicativo);    --et-bg: var(--c-aplicativo-bg); }
 
 .abrir {
     display: inline-flex;
@@ -771,6 +777,24 @@ button { cursor: pointer; }
 .abrir:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
 :root[data-tema="oscuro"] .abrir:hover { color: #0d131a; }
 .abrir:active { transform: translateY(1px); }
+
+/* Evidencias con varios archivos (audios, videos, simulador) */
+.evidencia > .evidencia-archivos {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s2) var(--s3);
+}
+.evidencia-archivos .abrir { width: auto; }
+.archivo-audio {
+    display: grid;
+    gap: var(--s1, 4px);
+    flex: 1 1 260px;
+    min-width: 0;
+}
+.archivo-audio span { font-size: var(--fs-xs); font-weight: 600; color: var(--ink-2); }
+.archivo-audio audio { width: 100%; max-width: 380px; }
 
 .vacio {
     padding: var(--s8) var(--s5);
@@ -915,6 +939,8 @@ button { cursor: pointer; }
 .m-participacion { --et-fg: var(--c-participacion); --et-bg: var(--c-participacion-bg); }
 .m-glosario      { --et-fg: var(--c-glosario);      --et-bg: var(--c-glosario-bg); }
 .m-proyecto      { --et-fg: var(--c-proyecto);      --et-bg: var(--c-proyecto-bg); }
+.m-acuse         { --et-fg: var(--c-acuse);         --et-bg: var(--c-acuse-bg); }
+.m-aplicativo    { --et-fg: var(--c-aplicativo);    --et-bg: var(--c-aplicativo-bg); }
 
 @media (prefers-reduced-motion: reduce) {
     .barra-tramo, .metrica-pista i { animation: none; }
@@ -1102,6 +1128,7 @@ dialog.ventana[open] { animation: aparecer 180ms var(--ease); }
     .tablero-resumen .resumen-dato:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
     .evidencia { grid-template-columns: 88px minmax(0, 1fr) 124px; }
     .evidencia > .abrir { grid-column: 2 / -1; width: max-content; }
+    .evidencia > .evidencia-archivos { grid-column: 2 / -1; }
 }
 
 @media (max-width: 760px) {
@@ -1150,6 +1177,7 @@ dialog.ventana[open] { animation: aparecer 180ms var(--ease); }
         padding-block: var(--s5);
     }
     .evidencia > .abrir { grid-column: 1; }
+    .evidencia > .evidencia-archivos { grid-column: 1; }
     .evidencia:hover { box-shadow: inset 3px 0 0 var(--brand); }
     .parciales { grid-template-columns: 1fr; }
     .tablero-metricas { grid-template-columns: 1fr; }

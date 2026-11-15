@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de domótica</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #eef2f7;
+color: #1f2937;
+max-width: 680px;
+margin: 30px auto;
+padding: 20px;
+}
+.panel {
+background: white;
+padding: 24px;
+border-radius: 16px;
+box-shadow: 0 4px 18px #0001;
+}
+.estado {
+padding: 20px;
+border-radius: 12px;
+text-align: center;
+background: #e5e7eb;
+margin: 16px 0;
+}
+.encendida {
+background: #fef3c7;
+color: #92400e;
+}
+button, input {
+margin: 6px 0;
+}
+button {
+padding: 11px 14px;
+border: 0;
+border-radius: 8px;
+cursor: pointer;
+background: #2563eb;
+color: white;
+}
+button.secundario {
+background: #475569;
+}
+#registro {
+background: #f8fafc;
+padding: 12px;
+min-height: 70px;
+font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="panel">
+<h1>Casa inteligente</h1>
+<p>Simulación de iluminación domótica</p>
+<div id="estado" class="estado">
+<h2 id="luz">   Luz apagada</h2>
+<p id="mensaje">Esperando movimiento</p>
+</div>
+<button onclick="detectar()">Detectar movimiento</button>
+<button class="secundario" onclick="manual()">
+Encender / apagar manualmente
+</button>
+<hr>
+<label for="tiempo">Apagado automático (segundos):</label>
+<input id="tiempo" type="number" min="3" max="60" value="10">
+<p>Modo: <strong id="modo">Automático</strong></p>
+<p>Último evento: <span id="ultimo">Ninguno</span></p>
+<h3>Registro de eventos</h3>
+<div id="registro">Sistema iniciado.</div>
+</div>
+<script>
+let encendida = false;
+let automatico = true;
+let temporizador = null;
+function registrar(texto) {
+const registro = document.getElementById("registro");
+const linea = document.createElement("p");
+linea.textContent = new Date().toLocaleTimeString()
++ " — " + texto;
+registro.prepend(linea);
+document.getElementById("ultimo").textContent = texto;
+}
+function actualizar() {
+const estado = document.getElementById("estado");
+document.getElementById("luz").textContent =
+encendida ? "   Luz encendida" : "   Luz apagada";
+document.getElementById("mensaje").textContent =
+encendida ? "Iluminación activa" : "Esperando movimiento";
+estado.className = encendida ? "estado encendida" : "estado";
+document.getElementById("modo").textContent =
+automatico ? "Automático" : "Manual";
+}
+function apagarProgramado() {
+clearTimeout(temporizador);
+if (!automatico || !encendida) return;
+let segundos = Number(document.getElementById("tiempo").value);
+if (!Number.isFinite(segundos)) segundos = 10;
+segundos = Math.max(3, Math.min(60, segundos));
+temporizador = setTimeout(() => {
+encendida = false;
+actualizar();
+registrar("Apagado automático");
+}, segundos * 1000);
+}
+function detectar() {
+automatico = true;
+encendida = true;
+actualizar();
+registrar("Movimiento detectado: luz encendida");
+apagarProgramado();
+}
+function manual() {
+clearTimeout(temporizador);
+automatico = false;
+encendida = !encendida;
+actualizar();
+registrar(encendida
+? "Encendido manual"
+: "Apagado manual");
+}
+actualizar();
+</script>
+</body>

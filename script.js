@@ -11,6 +11,40 @@
 /* ---------- 1. Datos ---------- */
 
 const evidencias = [
+    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Glosario 2.º Parcial", categoria:"glosario", parcial:"segundo", descripcion:"Glosario de términos del segundo parcial.", archivo:"archivos/segundo-parcial/Glosario/Glosario 2º Parcial - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Acrónimos", categoria:"glosario", parcial:"segundo", descripcion:"Acrónimos utilizados durante el segundo parcial.", archivo:"archivos/segundo-parcial/Acronimos/Acrónimos  -  Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Cronograma Proyecto Aplicativo - Arquitectura de Redes", categoria:"aplicativo", parcial:"segundo", descripcion:"Cronograma de actividades del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/Cronograma Proyecto Aplicativo - Arquitectura de Redes.xlsx" },
+    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Proyecto aplicativo: Implementación de una red inalámbrica mediante Access Point", categoria:"aplicativo", parcial:"segundo", descripcion:"Documento final del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/Implementación de una red inalámbrica mediante Access Point.pdf" },
+    { fecha:"2026-10-29", fechaTexto:"29 de octubre", titulo:"Avance de proyecto", categoria:"aplicativo", parcial:"segundo", descripcion:"Avance del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/avance_de_proyecto.pdf" },
+    { fecha:"2026-10-29", fechaTexto:"29 de octubre", titulo:"Tarea 5B - Cuestionario", categoria:"tarea", parcial:"segundo", descripcion:"Cuestionario correspondiente a la tarea 5B.", archivo:"archivos/segundo-parcial/Tareas/Tarea 5B Cuestionario - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-10-23", fechaTexto:"23 de octubre", titulo:"Simulador de iluminación inteligente", categoria:"tarea", parcial:"segundo", descripcion:"Simulador de domótica con su documento de evidencia.", archivos:[
+            { tipo:"html", etiqueta:"Abrir simulador", ruta:"archivos/segundo-parcial/Tareas/domotica.html" },
+            { tipo:"pdf", etiqueta:"Abrir PDF", ruta:"archivos/segundo-parcial/Tareas/Simulador de iluminación inteligente - Abimael Reyes Gonzalez.pdf" }
+        ] },
+    { fecha:"2026-10-22", fechaTexto:"22 de octubre", titulo:"Práctica 3B - Experimentación con códecs de audio y video", categoria:"practica", parcial:"segundo", descripcion:"Documento de la práctica y videos generados con distintos códecs.", archivos:[
+            { tipo:"pdf", etiqueta:"Abrir PDF", ruta:"archivos/segundo-parcial/Practicas/Práctica 3B - Experimentación con códex de audio y video.pdf" },
+            { tipo:"video", etiqueta:"Video A - H264 RF22", ruta:"archivos/segundo-parcial/Practicas/Video_A_H264_RF22.mp4" },
+            { tipo:"video", etiqueta:"Video B - H265 RF22", ruta:"archivos/segundo-parcial/Practicas/Video_B_H265_RF22.mp4" },
+            { tipo:"video", etiqueta:"Video C - H264 RF28", ruta:"archivos/segundo-parcial/Practicas/Video_C_H264_RF28.mp4" },
+            { tipo:"video", etiqueta:"Video de prueba", ruta:"archivos/segundo-parcial/Practicas/Video_Prueba.mp4" }
+        ] },
+    { fecha:"2026-10-22", fechaTexto:"22 de octubre", titulo:"Propuesta de Proyecto - Access Point en vivienda", categoria:"aplicativo", parcial:"segundo", descripcion:"Propuesta del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/Propuesta de Proyecto- Access Point en vivienda.pdf" },
+    { fecha:"2026-10-22", fechaTexto:"22 de octubre", titulo:"Tarea 4B - Investigación", categoria:"tarea", parcial:"segundo", descripcion:"Investigación correspondiente a la tarea 4B.", archivo:"archivos/segundo-parcial/Tareas/Tarea 4B Investigación - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-10-16", fechaTexto:"16 de octubre", titulo:"Evidencia de sesión - Codificación de audio", categoria:"participacion", parcial:"segundo", descripcion:"Grabaciones de audio con distintos efectos de voz.", archivos:[
+            { tipo:"audio", etiqueta:"Audio 1 - Voz Normal", ruta:"archivos/segundo-parcial/Participaciones/Audio 1 - Voz Normal.mpeg" },
+            { tipo:"audio", etiqueta:"Audio 1 - Voz Robótica", ruta:"archivos/segundo-parcial/Participaciones/Audio 1 - Voz Robotica.mpeg" },
+            { tipo:"audio", etiqueta:"Audio 2 - Voz Normal", ruta:"archivos/segundo-parcial/Participaciones/Audio 2 - Voz Normal.mpeg" },
+            { tipo:"audio", etiqueta:"Audio 2 - Voz Ardilla", ruta:"archivos/segundo-parcial/Participaciones/Audio 2 - Voz Ardilla.mpeg" }
+        ] },
+    { fecha:"2026-10-15", fechaTexto:"15 de octubre", titulo:"Práctica B2 - Tecnologías Inalámbricas", categoria:"practica", parcial:"segundo", descripcion:"Práctica sobre tecnologías inalámbricas.", archivo:"archivos/segundo-parcial/Practicas/Pract B2 - Tecnologías Inalámbricas.pdf" },
+    { fecha:"2026-10-15", fechaTexto:"15 de octubre", titulo:"T3B - Espectro Electromagnético y frecuencias de comunicación", categoria:"tarea", parcial:"segundo", descripcion:"Tarea sobre el espectro electromagnético y las frecuencias de comunicación.", archivo:"archivos/segundo-parcial/Tareas/T3B Espectro Electromagnético y frecuencias de comunicación.pdf" },
+    { fecha:"2026-10-09", fechaTexto:"9 de octubre", titulo:"Antena de Telecomunicaciones por Satélite - Recepción Digital Doméstica", categoria:"participacion", parcial:"segundo", descripcion:"Imagen de una antena de recepción satelital doméstica.", archivo:"archivos/segundo-parcial/Participaciones/Antena de Telecomunicaciones por Satélite (Recepción Digital Doméstica).png" },
+    { fecha:"2026-10-08", fechaTexto:"8 de octubre", titulo:"T2B - Caso práctico", categoria:"tarea", parcial:"segundo", descripcion:"Caso práctico de la tarea 2B.", archivo:"archivos/segundo-parcial/Tareas/T2B Caso Practico - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-10-02", fechaTexto:"2 de octubre", titulo:"Actividad de sesión 2B - Cuestionario", categoria:"participacion", parcial:"segundo", descripcion:"Cuestionario realizado durante la sesión 2B.", archivo:"archivos/segundo-parcial/Participaciones/Actividad de sesión 2B Cuestionario - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-10-01", fechaTexto:"1 de octubre", titulo:"Práctica 1B - Diagnóstico del rendimiento de una conexión WAN", categoria:"practica", parcial:"segundo", descripcion:"Diagnóstico del rendimiento de una conexión WAN.", archivo:"archivos/segundo-parcial/Practicas/Práctica 1B Diagnóstico del rendimiento de una conexión WAN.pdf" },
+    { fecha:"2026-09-25", fechaTexto:"25 de septiembre", titulo:"Participación Sesión 1B - Velocidad de servicio de Internet", categoria:"participacion", parcial:"segundo", descripcion:"Participación sobre la velocidad del servicio de Internet.", archivo:"archivos/segundo-parcial/Participaciones/Participación Sesión 1B Velocidad de servicio de Internet - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-09-24", fechaTexto:"24 de septiembre", titulo:"T0B Sol 1er parcial", categoria:"tarea", parcial:"segundo", descripcion:"Solución del primer parcial.", archivo:"archivos/segundo-parcial/Tareas/T0B Sol 1er parcial - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-09-18", fechaTexto:"18 de septiembre", titulo:"Acuse de calificación del 1er Parcial", categoria:"acuse", parcial:"primer", descripcion:"Acuse con la calificación del primer parcial.", archivo:"archivos/primer-parcial/Acuse/Acuse de calificación del 1er Parcial.png" },
     { fecha:"2026-09-17", fechaTexto:"17 de septiembre", titulo:"Glosario 1er Parcial - Abimael Reyes Gonzalez", categoria:"glosario", parcial:"primer", descripcion:"Glosario de términos del primer parcial.", archivo:"archivos/primer-parcial/glosario/Glosario 1er Parcial - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-09-11", fechaTexto:"11 de septiembre", titulo:"P6 - English Participation - Abimael Reyes González", categoria:"participacion", parcial:"primer", descripcion:"Participación realizada en idioma inglés.", archivo:"archivos/primer-parcial/participaciones/P6 - English Participation - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-09-10", fechaTexto:"10 de septiembre", titulo:"Video", categoria:"proyecto", parcial:"primer", descripcion:"Exposición en video del artículo trabajado en inglés.", archivo:"archivos/primer-parcial/proyecto/video.mp4", video:true },
@@ -35,8 +69,10 @@ const categorias = [
     { id:"tarea",         titulo:"Tareas",         singular:"Tarea",         resumen:"Investigaciones y actividades del curso." },
     { id:"practica",      titulo:"Prácticas",      singular:"Práctica",      resumen:"Practicas en equipo sobre Aquitectura de Redes." },
     { id:"participacion", titulo:"Participaciones",singular:"Participación", resumen:"Evidencias de las sesiones de clase." },
-    { id:"glosario",      titulo:"Glosario",       singular:"Glosario",      resumen:"Glosarios de los parciales." },
-    { id:"proyecto",      titulo:"Video",          singular:"Video",         resumen:"Propuesta y video del artículo en inglés." }
+    { id:"glosario",      titulo:"Glosario",       singular:"Glosario",      resumen:"Glosarios y acrónimos de los parciales." },
+    { id:"proyecto",      titulo:"Video",          singular:"Video",         resumen:"Propuesta y video del artículo en inglés." },
+    { id:"acuse",         titulo:"Acuses",         singular:"Acuse",         resumen:"Acuses de calificación y asistencia." },
+    { id:"aplicativo",    titulo:"Proyecto aplicativo", singular:"Aplicativo", resumen:"Documentos del proyecto aplicativo del segundo parcial." }
 ];
 
 const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
@@ -95,9 +131,9 @@ function resaltar(texto, consulta) {
 /* ---------- 3. Estado ---------- */
 
 const NOTAS_PARCIAL = {
-    todos:   "Agosto a septiembre de 2026",
+    todos:   "Agosto a noviembre de 2026",
     primer:  "Agosto a septiembre de 2026",
-    segundo: "Sin entregas cargadas todavía"
+    segundo: "Septiembre a noviembre de 2026"
 };
 
 const estado = { parcial: "todos", categoria: "todas", consulta: "" };
@@ -125,14 +161,62 @@ const limpiar  = $("#btnLimpiar");
 const busqueda = $("#busqueda");
 
 const ICONO_PDF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>';
+const ICONO_IMAGEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 4 3.5 3-2.5 4 3.5"/></svg>';
+const ICONO_ENLACE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>';
 const ICONO_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
+
+/* Tipo de archivo según su extensión (los que no se indican explícitamente). */
+function tipoDeArchivo(ruta) {
+    const ext = ruta.split(".").pop().toLowerCase();
+    if (["png", "jpg", "jpeg", "gif", "webp"].includes(ext)) return "imagen";
+    if (["mp4", "webm"].includes(ext)) return "video";
+    if (["mp3", "mpeg", "wav", "ogg", "m4a"].includes(ext)) return "audio";
+    if (["html", "htm"].includes(ext)) return "html";
+    if (ext === "pdf") return "pdf";
+    return "otro";
+}
+
+/* Archivos de una evidencia, sea de un solo archivo o de un grupo. */
+function archivosDe(ev) {
+    if (ev.archivos) return ev.archivos;
+    return [{ tipo: ev.video ? "video" : tipoDeArchivo(ev.archivo), ruta: ev.archivo }];
+}
+
+function enlaceArchivo(a) {
+    const ruta = escapar(a.ruta);
+    switch (a.tipo) {
+        case "imagen":
+            return `<a class="abrir" href="${ruta}" target="_blank" rel="noopener">${ICONO_IMAGEN}${escapar(a.etiqueta ?? "Abrir imagen")}</a>`;
+        case "html":
+            return `<a class="abrir" href="${ruta}" target="_blank" rel="noopener">${ICONO_ENLACE}${escapar(a.etiqueta ?? "Abrir página")}</a>`;
+        case "otro":
+            return `<a class="abrir" href="${ruta}" target="_blank" rel="noopener" download>${ICONO_PDF}${escapar(a.etiqueta ?? "Abrir archivo")}</a>`;
+        default:
+            return `<a class="abrir" href="${ruta}" target="_blank" rel="noopener">${ICONO_PDF}${escapar(a.etiqueta ?? "Abrir PDF")}</a>`;
+    }
+}
 
 function filaEvidencia(ev, i = 0) {
     const q = estado.consulta.trim();
+    let accion;
 
-    const accion = ev.video
-        ? `<button class="abrir" type="button" data-video="1">${ICONO_PLAY}Reproducir</button>`
-        : `<a class="abrir" href="${escapar(ev.archivo)}" target="_blank" rel="noopener">${ICONO_PDF}Abrir PDF</a>`;
+    if (ev.archivos) {
+        // Evidencia con varios archivos: se muestran agrupados bajo un mismo registro
+        const piezas = ev.archivos.map((a) => {
+            if (a.tipo === "audio") {
+                return `<div class="archivo-audio"><span>${escapar(a.etiqueta)}</span><audio controls preload="none" src="${escapar(a.ruta)}"></audio></div>`;
+            }
+            if (a.tipo === "video") {
+                return `<button class="abrir" type="button" data-video="${escapar(a.ruta)}" data-titulo="${escapar(a.etiqueta)}">${ICONO_PLAY}${escapar(a.etiqueta)}</button>`;
+            }
+            return enlaceArchivo(a);
+        }).join("");
+        accion = `<div class="evidencia-archivos">${piezas}</div>`;
+    } else if (ev.video) {
+        accion = `<button class="abrir" type="button" data-video="1">${ICONO_PLAY}Reproducir</button>`;
+    } else {
+        accion = enlaceArchivo({ tipo: tipoDeArchivo(ev.archivo), ruta: ev.archivo });
+    }
 
     return `
         <article class="evidencia" style="--i:${i}">
@@ -239,10 +323,7 @@ function sincronizarChips() {
     $$("#filtrosCategoria .chip").forEach((chip) => {
         chip.setAttribute("aria-pressed", String(chip.dataset.categoria === estado.categoria));
     });
-    const videos = evidencias.filter((e) => e.video).length;
-    $("#fichaTotal").textContent =
-        `${evidencias.length - videos} documentos y ${videos} video${videos === 1 ? "" : "s"}`;
-
+    $("#fichaTotal").textContent = textoArchivos();
     $$("#grupoParciales .pestana").forEach((p) => {
         p.setAttribute("aria-pressed", String(p.dataset.parcial === estado.parcial));
     });
@@ -259,14 +340,13 @@ function dibujarTablero() {
     ];
 
     // --- Cifras globales ---
-    const documentos = evidencias.filter((e) => !e.video).length;
-    const videos = total - documentos;
+    const { documentos, videos, audios } = contarArchivos();
     const conEntregas = parciales.filter((p) => evidencias.some((e) => e.parcial === p.id)).length;
 
     const resumen = [
         { cifra: total, etiqueta: "Actividades registradas", destacado: true },
         { cifra: categorias.length, etiqueta: "Tipos de actividad" },
-        { cifra: documentos, etiqueta: `Documentos PDF y ${videos} video${videos === 1 ? "" : "s"}` },
+        { cifra: documentos, etiqueta: `Documentos, ${videos} video${videos === 1 ? "" : "s"}${audios ? ` y ${audios} audio${audios === 1 ? "" : "s"}` : ""}` },
         { cifra: `${conEntregas}/${parciales.length}`, etiqueta: "Parciales con entregas" }
     ];
 
@@ -323,13 +403,29 @@ function dibujarTablero() {
     }).join("");
 }
 
+/* Cuenta los archivos reales (un grupo suma todos sus archivos). */
+function contarArchivos() {
+    const todos = evidencias.flatMap(archivosDe);
+    const videos = todos.filter((a) => a.tipo === "video").length;
+    const audios = todos.filter((a) => a.tipo === "audio").length;
+    return { documentos: todos.length - videos - audios, videos, audios };
+}
+
+function textoArchivos() {
+    const { documentos, videos, audios } = contarArchivos();
+    const v = `${videos} video${videos === 1 ? "" : "s"}`;
+    const a = `${audios} audio${audios === 1 ? "" : "s"}`;
+    return audios
+        ? `${documentos} documentos, ${v} y ${a}`
+        : `${documentos} documentos y ${v}`;
+}
+
 function dibujarPortada() {
     $("#totalEvidencias").textContent = evidencias.length;
     $("#ultimaEntrega").textContent = fechaCorta(ordenadas[0].fecha);
     // Las cifras de las pestañas salen de los datos, no del HTML
-    const videos = evidencias.filter((e) => e.video).length;
-    $("#fichaTotal").textContent =
-        `${evidencias.length - videos} documentos y ${videos} video${videos === 1 ? "" : "s"}`;
+    $("#fichaTotal").textContent = textoArchivos();
+    $("#totalSecciones").textContent = categorias.length;
 
     $$("#grupoParciales .pestana").forEach((p) => {
         const id = p.dataset.parcial;
@@ -475,9 +571,39 @@ const video     = $("#reproductorVideo");
 const cargando  = $("#cargandoVideo");
 let ultimoFoco  = null;
 
+const fuenteVideo   = $("source", video);
+const tituloVideo   = $("#tituloVideo");
+const subtituloVideo = $(".ventana-cabeza p", ventana);
+const pieVideo      = $(".ventana-pie", ventana);
+const VIDEO_ORIGINAL = {
+    src: fuenteVideo.getAttribute("src"),
+    titulo: tituloVideo.textContent,
+    subtitulo: subtituloVideo.textContent,
+    pie: pieVideo.innerHTML
+};
+
+/* Prepara el reproductor: el video del primer parcial (valor 1) o cualquier otro por su ruta. */
+function prepararVideo(ruta, titulo) {
+    if (!ruta || ruta === "1") {
+        fuenteVideo.setAttribute("src", VIDEO_ORIGINAL.src);
+        tituloVideo.textContent = VIDEO_ORIGINAL.titulo;
+        subtituloVideo.textContent = VIDEO_ORIGINAL.subtitulo;
+        pieVideo.innerHTML = VIDEO_ORIGINAL.pie;
+        return;
+    }
+    const nombre = ruta.split("/").pop();
+    fuenteVideo.setAttribute("src", ruta);
+    tituloVideo.textContent = titulo || nombre;
+    subtituloVideo.textContent = "Segundo parcial";
+    pieVideo.innerHTML = `<span>${escapar(nombre)}</span><a href="${escapar(ruta)}" download>Descargar el archivo</a>`;
+}
+
 function abrirVideo(origen) {
     ultimoFoco = origen ?? document.activeElement;
     cargando.hidden = false;
+    cargando.textContent = "";
+    cargando.innerHTML = '<span class="rueda" aria-hidden="true"></span><span>Cargando el video…</span>';
+    prepararVideo(origen?.dataset?.video, origen?.dataset?.titulo);
 
     if (typeof ventana.showModal === "function") {
         ventana.showModal();
