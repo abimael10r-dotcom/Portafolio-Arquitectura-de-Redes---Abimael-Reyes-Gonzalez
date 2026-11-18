@@ -36,6 +36,8 @@
     --c-proyecto:      #8e1729;  --c-proyecto-bg:      #f8eaec;
     --c-acuse:         #3d6b2c;  --c-acuse-bg:         #ebf4e6;
     --c-aplicativo:    #7b3f8d;  --c-aplicativo-bg:    #f4ebf7;
+    --c-examen:        #9a6200;  --c-examen-bg:        #fbf1dc;
+    --c-comentario:    #1f6f78;  --c-comentario-bg:    #e4f2f3;
 
     /* Tipografía */
     --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
@@ -88,6 +90,8 @@
     --c-proyecto:      #ef8a99;  --c-proyecto-bg:      #33191f;
     --c-acuse:         #a3d68c;  --c-acuse-bg:         #1a2b14;
     --c-aplicativo:    #d5a6e6;  --c-aplicativo-bg:    #2b1a33;
+    --c-examen:        #e8c36a;  --c-examen-bg:        #2e2410;
+    --c-comentario:    #7fd0d8;  --c-comentario-bg:    #12292c;
 
     --shadow-dialog: 0 18px 48px rgba(0, 0, 0, .6);
     color-scheme: dark;
@@ -753,6 +757,8 @@ button { cursor: pointer; }
 .et-proyecto      { --et-fg: var(--c-proyecto);      --et-bg: var(--c-proyecto-bg); }
 .et-acuse         { --et-fg: var(--c-acuse);         --et-bg: var(--c-acuse-bg); }
 .et-aplicativo    { --et-fg: var(--c-aplicativo);    --et-bg: var(--c-aplicativo-bg); }
+.et-examen { --et-fg: var(--c-examen); --et-bg: var(--c-examen-bg); }
+.et-comentario { --et-fg: var(--c-comentario); --et-bg: var(--c-comentario-bg); }
 
 .abrir {
     display: inline-flex;
@@ -941,6 +947,8 @@ button { cursor: pointer; }
 .m-proyecto      { --et-fg: var(--c-proyecto);      --et-bg: var(--c-proyecto-bg); }
 .m-acuse         { --et-fg: var(--c-acuse);         --et-bg: var(--c-acuse-bg); }
 .m-aplicativo    { --et-fg: var(--c-aplicativo);    --et-bg: var(--c-aplicativo-bg); }
+.m-examen { --et-fg: var(--c-examen); --et-bg: var(--c-examen-bg); }
+.m-comentario { --et-fg: var(--c-comentario); --et-bg: var(--c-comentario-bg); }
 
 @media (prefers-reduced-motion: reduce) {
     .barra-tramo, .metrica-pista i { animation: none; }

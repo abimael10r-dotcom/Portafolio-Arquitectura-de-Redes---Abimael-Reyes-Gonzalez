@@ -11,10 +11,16 @@
 /* ---------- 1. Datos ---------- */
 
 const evidencias = [
+    { fecha:"2026-11-20", fechaTexto:"20 de noviembre", titulo:"Comentarios de cierre de curso", categoria:"comentario", parcial:"segundo", descripcion:"Comentarios finales del curso.", archivo:"archivos/segundo-parcial/Comentario/Comentarios de cierre de curso.pdf" },
+    { fecha:"2026-11-20", fechaTexto:"20 de noviembre", titulo:"Acuse calificación y asistencia general", categoria:"acuse", parcial:"segundo", descripcion:"Acuse de calificación y asistencia general del curso.", archivo:"archivos/segundo-parcial/Acuses/Acuse calificación y asistencia general - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-11-20", fechaTexto:"20 de noviembre", titulo:"Acuse calificación y asistencia 2.º Parcial", categoria:"acuse", parcial:"segundo", descripcion:"Acuse de calificación y asistencia del segundo parcial.", archivo:"archivos/segundo-parcial/Acuses/Acuse calificación y asistencia 2º Parcial – Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-11-20", fechaTexto:"20 de noviembre", titulo:"Solución a mano del 2.º Parcial", categoria:"examen", parcial:"segundo", descripcion:"Solución a mano del segundo parcial.", archivo:"archivos/segundo-parcial/Examen/Solución a mano del 2º Parcial - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Glosario 2.º Parcial", categoria:"glosario", parcial:"segundo", descripcion:"Glosario de términos del segundo parcial.", archivo:"archivos/segundo-parcial/Glosario/Glosario 2º Parcial - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Acrónimos", categoria:"glosario", parcial:"segundo", descripcion:"Acrónimos utilizados durante el segundo parcial.", archivo:"archivos/segundo-parcial/Acronimos/Acrónimos  -  Abimael Reyes Gonzalez.pdf" },
-    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Cronograma Proyecto Aplicativo - Arquitectura de Redes", categoria:"aplicativo", parcial:"segundo", descripcion:"Cronograma de actividades del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/Cronograma Proyecto Aplicativo - Arquitectura de Redes.xlsx" },
-    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Proyecto aplicativo: Implementación de una red inalámbrica mediante Access Point", categoria:"aplicativo", parcial:"segundo", descripcion:"Documento final del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/Implementación de una red inalámbrica mediante Access Point.pdf" },
+    { fecha:"2026-11-13", fechaTexto:"13 de noviembre", titulo:"Proyecto aplicativo: Implementación de una red inalámbrica mediante Access Point", categoria:"aplicativo", parcial:"segundo", descripcion:"Documento final del proyecto aplicativo y su cronograma.", archivos:[
+            { tipo:"pdf", etiqueta:"Abrir PDF", ruta:"archivos/segundo-parcial/Proyecto Aplicativo/Implementación de una red inalámbrica mediante Access Point.pdf" },
+            { tipo:"otro", etiqueta:"Cronograma (Excel)", ruta:"archivos/segundo-parcial/Proyecto Aplicativo/Cronograma Proyecto Aplicativo - Arquitectura de Redes.xlsx" }
+        ] },
     { fecha:"2026-10-29", fechaTexto:"29 de octubre", titulo:"Avance de proyecto", categoria:"aplicativo", parcial:"segundo", descripcion:"Avance del proyecto aplicativo.", archivo:"archivos/segundo-parcial/Proyecto Aplicativo/avance_de_proyecto.pdf" },
     { fecha:"2026-10-29", fechaTexto:"29 de octubre", titulo:"Tarea 5B - Cuestionario", categoria:"tarea", parcial:"segundo", descripcion:"Cuestionario correspondiente a la tarea 5B.", archivo:"archivos/segundo-parcial/Tareas/Tarea 5B Cuestionario - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-10-23", fechaTexto:"23 de octubre", titulo:"Simulador de iluminación inteligente", categoria:"tarea", parcial:"segundo", descripcion:"Simulador de domótica con su documento de evidencia.", archivos:[
@@ -43,7 +49,7 @@ const evidencias = [
     { fecha:"2026-10-02", fechaTexto:"2 de octubre", titulo:"Actividad de sesión 2B - Cuestionario", categoria:"participacion", parcial:"segundo", descripcion:"Cuestionario realizado durante la sesión 2B.", archivo:"archivos/segundo-parcial/Participaciones/Actividad de sesión 2B Cuestionario - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-10-01", fechaTexto:"1 de octubre", titulo:"Práctica 1B - Diagnóstico del rendimiento de una conexión WAN", categoria:"practica", parcial:"segundo", descripcion:"Diagnóstico del rendimiento de una conexión WAN.", archivo:"archivos/segundo-parcial/Practicas/Práctica 1B Diagnóstico del rendimiento de una conexión WAN.pdf" },
     { fecha:"2026-09-25", fechaTexto:"25 de septiembre", titulo:"Participación Sesión 1B - Velocidad de servicio de Internet", categoria:"participacion", parcial:"segundo", descripcion:"Participación sobre la velocidad del servicio de Internet.", archivo:"archivos/segundo-parcial/Participaciones/Participación Sesión 1B Velocidad de servicio de Internet - Abimael Reyes Gonzalez.pdf" },
-    { fecha:"2026-09-24", fechaTexto:"24 de septiembre", titulo:"T0B Sol 1er parcial", categoria:"tarea", parcial:"segundo", descripcion:"Solución del primer parcial.", archivo:"archivos/segundo-parcial/Tareas/T0B Sol 1er parcial - Abimael Reyes Gonzalez.pdf" },
+    { fecha:"2026-09-24", fechaTexto:"24 de septiembre", titulo:"T0B Sol 1er parcial", categoria:"examen", parcial:"primer", descripcion:"Solución del primer parcial.", archivo:"archivos/primer-parcial/Examen/T0B Sol 1er parcial - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-09-18", fechaTexto:"18 de septiembre", titulo:"Acuse de calificación del 1er Parcial", categoria:"acuse", parcial:"primer", descripcion:"Acuse con la calificación del primer parcial.", archivo:"archivos/primer-parcial/Acuse/Acuse de calificación del 1er Parcial.png" },
     { fecha:"2026-09-17", fechaTexto:"17 de septiembre", titulo:"Glosario 1er Parcial - Abimael Reyes Gonzalez", categoria:"glosario", parcial:"primer", descripcion:"Glosario de términos del primer parcial.", archivo:"archivos/primer-parcial/glosario/Glosario 1er Parcial - Abimael Reyes Gonzalez.pdf" },
     { fecha:"2026-09-11", fechaTexto:"11 de septiembre", titulo:"P6 - English Participation - Abimael Reyes González", categoria:"participacion", parcial:"primer", descripcion:"Participación realizada en idioma inglés.", archivo:"archivos/primer-parcial/participaciones/P6 - English Participation - Abimael Reyes Gonzalez.pdf" },
@@ -72,7 +78,9 @@ const categorias = [
     { id:"glosario",      titulo:"Glosario",       singular:"Glosario",      resumen:"Glosarios y acrónimos de los parciales." },
     { id:"proyecto",      titulo:"Video",          singular:"Video",         resumen:"Propuesta y video del artículo en inglés." },
     { id:"acuse",         titulo:"Acuses",         singular:"Acuse",         resumen:"Acuses de calificación y asistencia." },
-    { id:"aplicativo",    titulo:"Proyecto aplicativo", singular:"Aplicativo", resumen:"Documentos del proyecto aplicativo del segundo parcial." }
+    { id:"aplicativo",    titulo:"Proyecto aplicativo", singular:"Aplicativo", resumen:"Documentos del proyecto aplicativo del segundo parcial." },
+    { id:"examen",        titulo:"Examen",         singular:"Examen",        resumen:"Soluciones de los exámenes parciales." },
+    { id:"comentario",    titulo:"Comentarios",    singular:"Comentario",    resumen:"Comentarios de cierre del curso." }
 ];
 
 const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
@@ -315,7 +323,10 @@ function actualizarConteos() {
     const base = deParcial();
     $$("#filtrosCategoria .chip b").forEach((b) => {
         const id = b.dataset.total;
-        b.textContent = id === "todas" ? base.length : base.filter((e) => e.categoria === id).length;
+        const n = id === "todas" ? base.length : base.filter((e) => e.categoria === id).length;
+        b.textContent = n;
+        // Una sección sin evidencias en el parcial elegido no se muestra
+        b.closest(".chip").hidden = id !== "todas" && n === 0;
     });
 }
 
@@ -345,7 +356,7 @@ function dibujarTablero() {
 
     const resumen = [
         { cifra: total, etiqueta: "Actividades registradas", destacado: true },
-        { cifra: categorias.length, etiqueta: "Tipos de actividad" },
+        { cifra: categorias.filter((c) => evidencias.some((e) => e.categoria === c.id)).length, etiqueta: "Tipos de actividad" },
         { cifra: documentos, etiqueta: `Documentos, ${videos} video${videos === 1 ? "" : "s"}${audios ? ` y ${audios} audio${audios === 1 ? "" : "s"}` : ""}` },
         { cifra: `${conEntregas}/${parciales.length}`, etiqueta: "Parciales con entregas" }
     ];
@@ -384,7 +395,7 @@ function dibujarTablero() {
 
         const reparto = parciales.map((p) => {
             const k = evidencias.filter((e) => e.categoria === c.id && e.parcial === p.id).length;
-            return `<span class="${k ? "" : "vacia"}"><i></i>${p.nombre} <b>${k}</b></span>`;
+            return k ? `<span><i></i>${p.nombre} <b>${k}</b></span>` : "";
         }).join("");
 
         return `
@@ -425,7 +436,7 @@ function dibujarPortada() {
     $("#ultimaEntrega").textContent = fechaCorta(ordenadas[0].fecha);
     // Las cifras de las pestañas salen de los datos, no del HTML
     $("#fichaTotal").textContent = textoArchivos();
-    $("#totalSecciones").textContent = categorias.length;
+    $("#totalSecciones").textContent = categorias.filter((c) => evidencias.some((e) => e.categoria === c.id)).length;
 
     $$("#grupoParciales .pestana").forEach((p) => {
         const id = p.dataset.parcial;
